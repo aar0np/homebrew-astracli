@@ -12,7 +12,6 @@ class AstraCli < Formula
   end
 
   test do
-    output = shell_output("./astra-cli db list")
-    assert_match true, output.start_with?("unable to login")
+    assert_match "Available Commands", shell_output("astra-cli 2>&1")
   end
 end
